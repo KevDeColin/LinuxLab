@@ -1,0 +1,90 @@
+QMessageBox {
+        background-color: #fbfbfb; /* QMessageBox背景颜色 */
+}
+
+QMessageBox QLabel#qt_msgbox_label { /* textLabel */
+	color: #298DFF;
+	background-color: transparent;
+	min-width: 240px; /* textLabel设置最小宽度可以相应的改变QMessageBox的最小宽度 */
+	min-height: 40px; /* textLabel和iconLabel高度保持一致 */
+}
+
+QMessageBox QLabel#qt_msgboxex_icon_label { /* iconLabel */
+	width: 40px;
+	height: 40px; /* textLabel和iconLabel高度保持一致 */
+}
+
+QMessageBox QPushButton { /* QMessageBox中的QPushButton样式 */
+	border: 1px solid #298DFF;
+	border-radius: 3px;
+	background-color: #F2F2F2;
+	color: #298DFF;
+	font-family: "Microsoft YaHei";
+	font-size: 10pt;
+	min-width: 70px;
+	min-height: 25px;
+}
+
+QMessageBox QPushButton:hover {
+	background-color: #298DFF;
+	color: #F2F2F2;
+}
+
+QMessageBox QPushButton:pressed {
+	background-color: #257FE6;
+}
+
+QMessageBox QDialogButtonBox#qt_msgbox_buttonbox { /* buttonBox */
+	button-layout: 0; /* 设置QPushButton布局好像没啥作用 */
+}
+// 设置垂直滚动条基本样式QScrollBar:vertical
+{
+    width:8px;
+    background:rgba(0,0,0,0%);
+    margin:0px,0px,0px,0px;
+    padding-top:9px;   // 留出9px给上面和下面的箭头
+    padding-bottom:9px;
+}
+QScrollBar::handle:vertical
+{
+    width:8px;
+    background:rgba(0,0,0,25%);
+    border-radius:4px;  
+    min-height:20;
+}
+QScrollBar::handle:vertical:hover
+{
+    width:8px;
+    background:rgba(0,0,0,50%);   
+    border-radius:4px;
+    min-height:20;
+}
+QScrollBar::add-line:vertical   
+{
+    height:9px;width:8px;
+    border-image:url(:/images/a/3.png);
+    subcontrol-position:bottom;
+}
+QScrollBar::sub-line:vertical  
+{
+    height:9px;width:8px;
+    border-image:url(:/images/a/1.png);
+    subcontrol-position:top;
+}
+QScrollBar::add-line:vertical:hover   
+{
+    height:9px;width:8px;
+    border-image:url(:/images/a/4.png);
+    subcontrol-position:bottom;
+}
+QScrollBar::sub-line:vertical:hover  // 当鼠标放到下箭头上的时候
+{
+    height:9px;width:8px;
+    border-image:url(:/images/a/2.png);
+    subcontrol-position:top;
+}
+QScrollBar::add-page:vertical,QScrollBar::sub-page:vertical   // 当滚动条滚动的时候，上面的部分和下面的部分
+{
+    background:rgba(0,0,0,10%);
+    border-radius:4px;
+}
